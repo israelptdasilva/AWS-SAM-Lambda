@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "go-lambda"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1x3a8uqec86si"
+s3_prefix = "go-lambda"
+region = "sa-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []

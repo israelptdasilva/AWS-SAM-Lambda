@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  go-lambda
+  
+  Sample SAM Template for go-lambda
+
+Globals:
+  Function:
+    Timeout: 5
+
+Resources:
+  GoLambdaFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: go-lambda/
+      Handler: go-lambda
+      Runtime: go1.x
+      Architectures:
+        - x86_64
+
+Outputs:
+  GoLambdaFunction:
+    Description: "First Lambda Function ARN"
+    Value: !GetAtt GoLambdaFunction.Arn
+  GoLambdaFunctionIamRole:
+    Description: "Implicit IAM Role created for Hello World function"
+    Value: !GetAtt GoLambdaFunctionRole.Arn
