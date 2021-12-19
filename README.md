@@ -54,6 +54,14 @@ A successfull deploy will create a S3 bucket with the lambda function, the lambd
 > sam deploy --guided (or just sam deploy)
 ```
 
+#### Delete Stack
+
+Delete the deployed stack if you don't want to keep it around anymore.
+
+```bash
+> sam delete
+```
+
 > Quem florestas e mares foi rasgando
 e entre raios, pedradas e metralhas,
 ficou gemendo, mas ficou sonhando! (João da Cruz e Sousa)
